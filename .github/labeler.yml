@@ -1,4 +1,3 @@
-# Language Tags
 c-langugae:
   - '**/*.c'
 cpp:
@@ -11,16 +10,12 @@ php:
   - '**/*.php'
 python:
   - '**/*.py'
-  
-# Documentation Tags
 'Type: Documentation':
   - '**/*.md'
 'Type: CI/CD':
   - '.github/workflows/*.yml'
   - '.circleci/*'
   - '.travis.yml'
-
-# Topic Tags
 Maths:
 - any: [Maths/**/*]
 Array:
