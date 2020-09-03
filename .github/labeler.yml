@@ -1,0 +1,18 @@
+c-langugae:
+  - '**/*.c'
+cpp:
+  - '**/*.cpp'
+java:
+  - '**/*.java'
+javascript:
+  - '**/*.js'
+php:
+  - '**/*.php'
+python:
+  - '**/*.py'
+'Type: Documentation':
+  - '**/*.md'
+'Type: CI/CD':
+  - '.github/workflows/*.yml'
+  - '.circleci/*'
+  - '.travis.yml'
