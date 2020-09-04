@@ -28,7 +28,7 @@ jobs:
     - if: needs.checkFirst.outputs.isFirst == 'false'
       run: |
           echo ${{needs.checkFirst.outputs.first}}
-          echo \n"${{needs.checkFirst.outputs.username}}"\ng >> README.md
+          echo '\n${{needs.checkFirst.outputs.username}}\n' >> README.md
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
