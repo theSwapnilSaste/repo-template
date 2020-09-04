@@ -15,7 +15,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
     - name: Test Add to README.md
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - run: |
           date > generated.txt
           git config user.name github-actions
