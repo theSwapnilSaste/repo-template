@@ -1,22 +1,5 @@
 # README.md
 
-wait.. 
+Your awesome Text Here
 
 ###### Contributors
-
-steps.id.contri.outputs.USER
-steps.id.contri.outputs.USER
-steps.id.contri.outputs.USER
-steps.id.contri.outputs.USER
-steps.id.contri.outputs.USER
-steps.id.contri.outputs.USER
-
-steps.id.contri.outputs.USER
-
-steps.id.contri.outputs.USER
-test\n
-testtesttestntestng
-\ntest\n
-
-test
-
