@@ -17,17 +17,7 @@ jobs:
     - name: Test Add to README.md
       uses: theSwapnilSaste/write-file-action@master
       with:
-        path: ${{ github.workspace }}/README.md
+        path: ${{ env.home }}/README.md
         contents: |
           echo "Hello World!"
         write-mode: append
-    - name: hi
-      uses: actions/checkout@v2
-      with:
-        run: |
-          git config --global user.name ${{ secrets.NAME }}
-          git config --global user.email ${{ secrets.MAIL }}
-          git remote set-url origin https://theswapnilsaste:${{ secrets.GITHUB_TOKEN }}@github.com/$repo-template
-          git checkout "${GITHUB_REF:11}"
-          git commit -am "Automated report"
-          git push
