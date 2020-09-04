@@ -1,26 +1,2 @@
 c-langugae:
-  - '**/*.c'
-cpp:
-  - '**/*.cpp'
-java:
-  - '**/*.java'
-javascript:
-  - '**/*.js'
-php:
-  - '**/*.php'
-python:
-  - '**/*.py'
-'Type: Documentation':
-  - '**/*.md'
-'Type: CI/CD':
-  - '.github/workflows/*.yml'
-  - '.circleci/*'
-  - '.travis.yml'
-Maths:
-- any: [Maths/**/*]
-Array:
-- any: [Array/**/*]
-DP:
-- any: [Dynamic-Programming/**/*]
-Greedy:
-- any: [Greedy-Algorithm/**/*]
+  - any['**/*.c']
