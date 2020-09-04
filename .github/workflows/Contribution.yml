@@ -17,7 +17,7 @@ jobs:
     - name: Test Add to README.md
       uses: theSwapnilSaste/write-file-action@master
       with:
-        path: ${{ env.home }}/README.md
+        path: ${{ github.workspace }}/README.md
         contents: |
           echo "Hello World!"
         write-mode: append
