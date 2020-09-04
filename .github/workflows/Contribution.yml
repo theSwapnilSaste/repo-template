@@ -24,7 +24,7 @@ jobs:
     steps:
     - name: Test Add to README.md
       uses: actions/checkout@v2
-    - if: (${{needs.checkFirst.outputs.first}}!='false')
+    - if: ${{needs.checkFirst.outputs.first}} == 'true'
       run: |
           echo ${{needs.checkFirst.outputs.first}}
           echo -n "${{needs.checkFirst.outputs.user}}" >> README.md
