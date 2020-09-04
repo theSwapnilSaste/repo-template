@@ -17,3 +17,6 @@ steps.id.contri.outputs.USER
 test\n
 testtesttestntestng
 \ntest\n
+
+test
+
