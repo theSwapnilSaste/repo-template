@@ -1,1 +1,23 @@
+name: Add to Contributors
+on:
+  push:
+    branches:
+    - master
 
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check first PR of user
+      id: contri
+      uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
+    - name: Test Add to README.md
+      uses: theSwapnilSaste/write-file-action
+      with:
+        path: ${{ github.workspace }}/README.md
+        contents: |
+          echo "Hello World!"
+        write-mode: append
