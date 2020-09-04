@@ -21,6 +21,9 @@ jobs:
         contents: |
           echo "Hello World!"
         write-mode: append
+    - name: hi
+      uses: actions/checkout@v2
+      with:
         run: |
           git config --global user.name ${{ secrets.NAME }}
           git config --global user.email ${{ secrets.MAIL }}
