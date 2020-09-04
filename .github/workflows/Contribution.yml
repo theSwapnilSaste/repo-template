@@ -19,13 +19,14 @@ jobs:
         pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
 
   addToContributors:
-    if: ${{needs.checkFirst.outputs.first}} == 'true'
+    if: needs.checkFirst.outputs.first == 'true'
     runs-on: ubuntu-latest
     needs: checkFirst
     steps:
     - name: Test Add to README.md
       uses: actions/checkout@v2
-    - run: |
+    - if: needs.checkFirst.outputs.first == 'true'
+      run: |
           echo ${{needs.checkFirst.outputs.first}}
           echo -n "${{needs.checkFirst.outputs.user}}" >> README.md
           git config user.name github-actions
