@@ -16,7 +16,7 @@ jobs:
         pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
     - name: Test Add to README.md
       uses: actions/checkout@v2
-    - if: steps.id.contri.outputs.FIRST=='true'
+    - if: steps.id.contri.outputs.FIRST!='true'
       run: |
           github.event.pull_request.user.login > README.md
           git config user.name github-actions
