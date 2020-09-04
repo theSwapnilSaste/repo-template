@@ -15,9 +15,11 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
     - name: Test Add to README.md
-      uses: theSwapnilSaste/write-file-action@master
-      with:
-        path: ${{ github.workspace }}/README.md
-        contents: |
-          echo "Hello World!"
-        write-mode: append
+    - uses: actions/checkout@v2
+    - run: |
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
