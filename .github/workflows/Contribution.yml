@@ -15,7 +15,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
     - name: Test Add to README.md
-      uses: theSwapnilSaste/write-file-action
+      uses: theSwapnilSaste/write-file-action@master
       with:
         path: ${{ github.workspace }}/README.md
         contents: |
